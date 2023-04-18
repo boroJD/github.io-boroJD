@@ -1,0 +1,545 @@
+
+<html>
+    <head>
+        <style>
+            .text{
+                padding-top:35px;
+            }
+            .calemenu{
+        background-color: black;
+        height:100px;
+        width: 100%;
+        z-index:10;
+        position: fixed;
+        padding-top: 35px;
+    }
+    .linki{
+        position: fixed;
+        z-index:25;
+        margin-top:35px;
+    }
+    .twitter{
+        width: 33.125px ;
+        height:70px;
+        background-color: white;
+        z-index: 3;
+        background-size: cover;
+        position: relative;
+        float: left;
+    }
+    .facebook{
+        width: 33.125px;
+        height:70px;
+        background-color: white;
+        z-index: 2;
+        position: relative;
+        float: left;
+        
+    }
+    .instagram{
+        width: 33.125px;
+        height:70px;
+        background-color: white;
+        z-index: 2;
+        position: relative;
+        float: left;
+    }
+    .youtube{
+        width: 33.125px;
+        height:70px;
+        background-color: white;
+        z-index: 2;
+        position: relative;
+        float: left;
+    }
+    .facebook ion-icon  {
+  font-size: 32px;
+  margin-top: 15px;
+  color: var(--clr);
+}
+.instagram ion-icon {
+    font-size: 32px;
+    margin-top: 15px;
+    color: var(--clr);
+}
+.twitter ion-icon {
+    font-size: 32px;
+    margin-top: 15px;
+    color: var(--clr);
+}
+.youtube ion-icon {
+    font-size: 32px;
+    margin-top: 15px;
+    color: var(--clr);
+}
+.twitter:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+.facebook:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+.instagram:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+.youtube:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+        font-family: 'Poppins', sans-serif;
+    }
+
+    :root { 
+        --clr: #000000;
+    }
+
+   
+    /* Pasek Nawigacji */
+    .navbarfixed {
+        background: black;
+        width: 100%;
+        height: 70px;
+        position: fixed;
+    }
+    .navigation {
+        position: relative;
+        width: 100%;
+        height: 70px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 45px;
+    }
+
+        .navigation ul {
+            display: flex;
+            width: 350px;
+        }
+
+            .navigation ul li {
+                position: relative;
+                list-style: none;
+                width: 70px;
+                height: 70px;
+                z-index: 1;
+            }
+
+                .navigation ul li a {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 500;
+                }
+
+                    .navigation ul li a .icon {
+                        position: relative;
+                        display: block;
+                        line-height: 75px;
+                        font-size: 1.5em;
+                        text-align: center;
+                        transition: 0.5s;
+                        color: var(--clr);
+                    }
+
+                .navigation ul li.active a .icon {
+                    transform: translateY(-32px);
+                }
+
+                .navigation ul li a .text {
+                    position: absolute;
+                    color: var(--clr);
+                    font-weight: 400;
+                    font-size: 0.75em;
+                    letter-spacing: 0.05em;
+                    transition: 0.5s;
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                .navigation ul li.active a .text {
+                    opacity: 1;
+                    transform: translateY(10px);
+                }
+                .navigation ion-icon{
+                    padding-top: 20px;
+                }
+
+    .indicator {
+        position: absolute;
+        top: -50%;
+        width: 70px;
+        height: 70px;
+        background: #29fd53;
+        border-radius: 50%;
+        border: 6px solid var(--clr);
+        transition: 0.5s;
+        
+    }
+
+        .indicator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -22px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-right-radius: 20px;
+            box-shadow: 1px -10px 0 0 var(--clr);
+        }
+
+        .indicator::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -22px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-left-radius: 20px;
+            box-shadow: -1px -10px 0 0 var(--clr);
+        }
+
+    .navigation ul li:nth-child(1).active ~ .indicator {
+        transform: translateX(calc(70px * 0));
+    }
+
+    .navigation ul li:nth-child(2).active ~ .indicator {
+        transform: translateX(calc(70px * 1));
+    }
+
+    .navigation ul li:nth-child(3).active ~ .indicator {
+        transform: translateX(calc(70px * 2));
+    }
+
+    .navigation ul li:nth-child(4).active ~ .indicator {
+        transform: translateX(calc(70px * 3));
+    }
+
+    .navigation ul li:nth-child(5).active ~ .indicator {
+        transform: translateX(calc(70px * 4));
+    }
+    .
+            body{ 
+                margin: 0;
+            }
+            
+    #opinia1{
+    width: 20%;
+    height: 600px;
+    border: 1px solid black;
+    margin-left: 300px;
+    margin-top: 150px;
+    float: left;
+    text-align: center;
+}
+
+#opinia2{
+    width: 20%;
+    height: 600px;
+    border: 1px solid black;
+    margin-left: 80px;
+    margin-top: 150px;
+    float: left;
+    text-align: center;
+
+}
+
+#opinia3{
+    width: 20%;
+    height: 600px;
+    border: 1px solid black;
+    margin-left: 80px;
+    margin-top: 150px;
+    background-color: white;
+    float: left;
+    text-align: center;
+
+}
+
+#zdj_tlo{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 100%;
+    background-image: url("https://volantification.pl/wp-content/uploads/2017/01/jake.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    
+}
+
+#zdj_tlo2{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 100%;
+    background-image: url("https://bi.im-g.pl/im/90/8c/1a/z27839120IER,Szczesliwa-kobieta.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+
+#zdj_tlo3{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 100%;
+    background-image: url("https://i.randki24.pl/img/opisy/przystojny-atrakcyjny-usmiechniety-mezczyzna.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+h2{
+    position: absolute;
+    margin-left: 140px;
+
+}
+
+.opinie p {
+    margin-top: 70px;
+    padding-top: 10px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-top: 2px solid orange;
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    
+}
+
+#ikony{
+    color: orange;
+    font-size: 35px;
+    width: 50%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: ;
+}
+.stopka p {
+    text-align: center;
+    color: #999;
+    padding-top:15px ;    
+}
+.stopka{
+    margin-top: 100px;
+    width: 100%;
+    height: 200px;
+    background-color: #3e3f46;
+    text-decoration: none;
+    z-index:200;
+    position: relative;
+    float: left;
+}
+
+.foot{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+    font-size: 20px;
+    position: relative;
+    top: 25px;
+}
+
+.foot1{
+    margin-left: 10px;
+    padding: 10px;
+    color: #999;
+}
+.foot1:hover{
+    background-color: #333;
+    transition-duration: 1s;
+}
+.foot2{
+    margin-left: 10px;
+    padding: 10px;
+    color: #999;
+}
+.foot2:hover{
+    background-color: #333;
+    transition-duration: 1s;
+}
+.foot3{
+    margin-left: 10px;
+    padding: 10px;
+    color: #999;
+}
+.foot3:hover{
+    background-color: #333;
+    transition-duration: 1s;
+}
+.foot4{
+    margin-left: 10px;
+    padding: 10px;
+    color: #999;
+}
+.foot4:hover{
+    background-color: #333;
+    transition-duration: 1s;
+}
+.foot5{
+    margin-left: 10px;
+    padding: 10px;
+    color: #999;
+}
+.foot5:hover{
+    background-color:  #333 ;
+    transition-duration: 1s;
+}
+.kolor{
+    text-decoration: none;
+    color: black;
+}
+</style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opinie</title>
+    
+</head>
+<body>
+    <div class="linki">
+        <div class="twitter">
+            <a href="https://twitter.com/?lang=pl">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+        </div>
+        <div class="facebook">
+            <a href="https://www.facebook.com">
+            <span class="icon"><ion-icon name="logo-facebook"></ion-icon></span>
+        </a>
+        </div>
+        <div class="instagram">
+            <a href="https://www.instagram.com">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        </div>
+        <div class="youtube">
+            <a href="https://www.youtube.com">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+        </div>
+    </div>
+    <div class="calemenu">
+        <div class="navbarfixed">
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="glowna.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="text">Strona Główna</span>
+                    </a>
+                </li>
+    
+                <li class="list">
+                    <a href="profile.html">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+    
+                <li class="list">
+                    <a href="glowna.html #formularz">
+                        <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                        <span class="text">Kontakt</span>
+                    </a>
+                </li>
+    
+                <li class="list">
+                    <a href="galeria.html">
+                        <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+                        <span class="text">nasze projekty</span>
+                    </a>
+                </li>
+    
+                <li class="list">
+                    <a href="cv.html">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="text">Cv</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="opinie">
+        <div id="opinia1">
+            <div id="zdj_tlo"></div>
+            <h2>Mariusz</h2>
+            <p>"Jestem bardzo zadowolony z ich pracy, ponieważ moje wnętrze zostało zaprojektowane w sposób, który idealnie odpowiada moim oczekiwaniom. Zmijewski Studio jest bardzo skrupulatne i dba o każdy szczegół, dzięki czemu końcowy efekt jest niesamowity."</p><br><br>
+            <br>
+            
+            <div id="ikony"><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon></div>
+        </div>
+        <div id="opinia2">
+            <div id="zdj_tlo2"></div>
+            <h2>Wiktoria</h2>
+            <p>"Zmijewski Studio to<br> biuro projektowe,<br> które oferuje nie tylko kreatywny i indywidualny projekt, ale także<br> wysoką jakość wykonania. <br> Ich profesjonalizm, skrupulatność i dbałość o szczegóły są godne pochwały. Polecam!"</p><br><br><br><br><br>
+            
+            <div id="ikony"><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-half"></ion-icon></div>
+        </div>
+        <div id="opinia3">
+            <div id="zdj_tlo3"></div>
+            <h2>Krystian</h2>
+            <p>"Zmijewski Studio to biuro projektowe, które potrafi przerobić zwykłe wnętrza na naprawdę wyjątkowe. Ich projekty są estetyczne, funkcjonalne i dopasowane do potrzeb klienta. Ich profesjonalizm i dbałość o szczegóły  zrobiły na mnie wrażenie.  Polecam każdemu!"</p><br>
+        
+            <div id="ikony"><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon></div>
+        </div>
+    </div>
+    <div class="stopka">
+        <div class="foot">
+            <a class="kolor" href="glowna.html"><div class="foot1">Strona Główna</div></a>
+            <a class="kolor" href="profile.html"><div class="foot2">Rejestracja</div></a>
+            <a class="kolor" href="glowna.html #formularz"><div class="foot3">kontakt</div></a>
+            <a class="kolor" href="galeria.html"><div class="foot4">nasze projekty</div></a>
+            <a class="kolor" href="cv.html"><div class="foot5">Cv</div></a>
+        
+        </div> 
+        
+        <br><br><br><br>
+        
+        <p>Wszelkie prawa zastrzeżone %#$^983345 zmijewskistudio, Borys Żmijewski</p>
+    </div>
+    
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>
+</body>
+</html>

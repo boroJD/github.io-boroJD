@@ -1,0 +1,457 @@
+<html>
+    <style>
+        body{
+            background-color: white;
+        }
+        .calemenu{
+        background-color: black;
+        height:100px;
+        width: 100%;
+        z-index:10;
+        position: fixed;
+        padding-top: 35px;
+    }
+    .linki{
+        position: fixed;
+        z-index:25;
+        margin-top:35px;
+    }
+    .twitter{
+        width: 33.125px ;
+        height:70px;
+        background-color: white;
+        z-index: 3;
+        background-size: cover;
+        position: relative;
+        float: left;
+    }
+    .facebook{
+        width: 33.125px;
+        height:70px;
+        background-color: white;
+        z-index: 2;
+        position: relative;
+        float: left;
+        
+    }
+    .instagram{
+        width: 33.125px;
+        height:70px;
+        background-color: white;
+        z-index: 2;
+        position: relative;
+        float: left;
+    }
+    .youtube{
+        width: 33.125px;
+        height:70px;
+        background-color: white;
+        z-index: 2;
+        position: relative;
+        float: left;
+    }
+    .facebook ion-icon  {
+  font-size: 32px;
+  margin-top: 15px;
+  color: var(--clr);
+}
+.instagram ion-icon {
+    font-size: 32px;
+    margin-top: 15px;
+    color: var(--clr);
+}
+.twitter ion-icon {
+    font-size: 32px;
+    margin-top: 15px;
+    color: var(--clr);
+}
+.youtube ion-icon {
+    font-size: 32px;
+    margin-top: 15px;
+    color: var(--clr);
+}
+.twitter:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+.facebook:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+.instagram:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+.youtube:hover ion-icon{
+    transform: scale(1.25); transition-duration: 1s;
+}
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+        font-family: 'Poppins', sans-serif;
+    }
+
+    :root { 
+        --clr: #000000;
+    }
+
+    body {
+        
+        
+        background-color: black;
+        font-weight: 400;
+    }
+    /* Pasek Nawigacji */
+    .navbarfixed {
+        background: black;
+        width: 100%;
+        height: 70px;
+        position: fixed;
+    }
+    .navigation {
+        position: relative;
+        width: 100%;
+        height: 70px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 45px;
+    }
+
+        .navigation ul {
+            display: flex;
+            width: 350px;
+        }
+
+            .navigation ul li {
+                position: relative;
+                list-style: none;
+                width: 70px;
+                height: 70px;
+                z-index: 1;
+            }
+
+                .navigation ul li a {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 500;
+                }
+
+                    .navigation ul li a .icon {
+                        position: relative;
+                        display: block;
+                        line-height: 75px;
+                        font-size: 1.5em;
+                        text-align: center;
+                        transition: 0.5s;
+                        color: var(--clr);
+                        padding-top: 20px;
+                    }
+
+                .navigation ul li.active a .icon {
+                    transform: translateY(-32px);
+                }
+
+                .navigation ul li a .text {
+                    position: absolute;
+                    color: var(--clr);
+                    font-weight: 400;
+                    font-size: 0.75em;
+                    letter-spacing: 0.05em;
+                    transition: 0.5s;
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                .navigation ul li.active a .text {
+                    opacity: 1;
+                    transform: translateY(10px);
+                }
+
+    .indicator {
+        position: absolute;
+        top: -50%;
+        width: 70px;
+        height: 70px;
+        background: #29fd53;
+        border-radius: 50%;
+        border: 6px solid var(--clr);
+        transition: 0.5s;
+    }
+
+        .indicator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -22px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-right-radius: 20px;
+            box-shadow: 1px -10px 0 0 var(--clr);
+        }
+
+        .indicator::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -22px;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-top-left-radius: 20px;
+            box-shadow: -1px -10px 0 0 var(--clr);
+        }
+
+    .navigation ul li:nth-child(1).active ~ .indicator {
+        transform: translateX(calc(70px * 0));
+    }
+
+    .navigation ul li:nth-child(2).active ~ .indicator {
+        transform: translateX(calc(70px * 1));
+    }
+
+    .navigation ul li:nth-child(3).active ~ .indicator {
+        transform: translateX(calc(70px * 2));
+    }
+
+    .navigation ul li:nth-child(4).active ~ .indicator {
+        transform: translateX(calc(70px * 3));
+    }
+
+    .navigation ul li:nth-child(5).active ~ .indicator {
+        transform: translateX(calc(70px * 4));
+    }
+    
+    .text{
+        padding-top:30px;
+    }
+    .oferty {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    padding-top: 150px;
+}
+.oferta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.oferta img {
+    width: 450px;
+    height: 270px;
+    border-radius: 10px;
+}
+.oferta img:hover {
+    transition: 0.5s;
+    box-shadow: 0px 0px 20px 6px #c1c1c1;
+}
+footer{
+    margin-top: 50px;
+    width: 100%;
+    height: 200px;
+    background-color: #3e3f46;
+    text-decoration: none;
+    
+}
+
+.foot{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+    font-size: 20px;
+    position: relative;
+    top: 25px;
+}
+
+.foot1{
+    margin-left: 10px;
+    padding: 10px;
+    color: #999;
+}
+.foot1:hover{
+    background-color: #333;
+    transition-duration: 1s;
+}
+.foot2{
+    margin-left: 10px;
+    padding: 10px;
+    color: #999;
+}
+.foot2:hover{
+    background-color: #333;
+    transition-duration: 1s;
+}
+.foot3{
+    margin-left: 10px;
+    padding: 10px;
+    color: #999;
+}
+.foot3:hover{
+    background-color: #333;
+    transition-duration: 1s;
+}
+.foot4{
+    margin-left: 10px;
+    padding: 10px;
+    color: #999;
+}
+.foot4:hover{
+    background-color: #333;
+    transition-duration: 1s;
+}
+.foot5{
+    margin-left: 10px;
+    padding: 10px;
+    color: #999;
+}
+.foot5:hover{
+    background-color:  #333 ;
+    transition-duration: 1s;
+}
+.kolor{
+    text-decoration: none;
+    color: black;
+}
+
+footer p{
+    text-align: center;
+    color: #999;
+}
+.oferty p{
+    text-align: center;
+    color: #999;
+    padding-top:15px ;
+}
+.list a{
+    transition-duration: 1.5s;
+}
+
+
+    </style>
+    <head>
+
+    </head>
+    <body>
+        <div class="linki">
+            <div class="twitter">
+                <a href="https://twitter.com/?lang=pl">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </div>
+            <div class="facebook">
+                <a href="https://www.facebook.com">
+                <span class="icon"><ion-icon name="logo-facebook"></ion-icon></span>
+            </a>
+            </div>
+            <div class="instagram">
+                <a href="https://www.instagram.com">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            </div>
+            <div class="youtube">
+                <a href="https://www.youtube.com">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </div>
+        </div>
+        <div class="calemenu">
+            <div class="navbarfixed">
+            <div class="navigation">
+                <ul>
+                    <li class="list">
+                        <a href="glowna.html">
+                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="text">Strona Główna</span>
+                        </a>
+                    </li>
+        
+                    <li class="list">
+                        <a href="profile.html">
+                            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                            <span class="text">Profile</span>
+                        </a>
+                    </li>
+        
+                    <li class="list">
+                        <a href="glowna.html #formularz ">
+                            <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                            <span class="text">Kontakt</span>
+                        </a>
+                    </li>
+        
+                    <li class="list active">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+                            <span class="text">nasze projekty</span>
+                        </a>
+                    </li>
+        
+                    <li class="list">
+                        <a href="cv.html">
+                            <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                            <span class="text">Cv</span>
+                        </a>
+                    </li>
+                    <div class="indicator"></div>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="oferty">
+            <div class="oferta"><img src="https://wnetrza.shop/userdata/public/news/images/32.jpg"><p>Miodowa 3</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/5-projekt-wntrza-domu-japandi-milkdesigns-bartosz-klim-1875x1406.jpg"><p>czartoryska 14a</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/3-projekt-wntrza-domu-klasa-milkdesigns-bartosz-klim-2220x1249.jpg"><p>Wielicka 265</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/6a-projekt-wntrza-domu-klasa-milkdesigns-bartosz-klim-2220x1249.jpg"><p>Wielicka 265</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/9-projekt-wntrza-domu-klasa-milkdesigns-bartosz-klimklim-2220x1249.jpg"><p>nowosądecka 47b</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/18-projekt-wntrza-domu-klasa-milkdesigns-bartosz-klim-2220x1249.jpg"><p>Wolska 9</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/25-projekt-wntrza-domu-klasa-milkdesigns-bartosz-klim-2220x1249.jpg"><p>Tuchowicza 3</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/31-projekt-wntrza-domu-klasa-milkdesigns-bartosz-klim-2220x1249.jpg"><p>Myślenicka 19</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/1-projekt-wntrza-mieszkania-boho-milkdesigns-bartosz-klim-2220x1249.jpg"><p>Floriańska 25a</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/4-projekt-wntrza-nowoczesnego-mieszkania-pop-of-green-milkdesigns-bartosz-klim-2220x1249.jpg"><p>Aleja 29 listopada </p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/6-projekt-wntrza-nowoczesnego-mieszkania-pop-of-green-milkdesigns-bartosz-klim-2220x1249.jpg"><p>Aleja 29 listopada</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/8-projekt-wntrza-nowoczesnego-mieszkania-pop-of-green-milkdesigns-bartosz-klim-2220x1249.jpg"><p>Jana Pawła II</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/11-projekt-wntrza-nowoczesnego-mieszkania-pop-of-green-milkdesigns-bartosz-klim-2220x1249.jpg"><p>Aleja 29 listopada</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/12-projekt-wntrza-nowoczesnego-mieszkania-pop-of-green-milkdesigns-bartosz-klim-2220x1249.jpg"><p>Aleja 29 listopada</p><p></p></div>
+            <div class="oferta"><img src="https://milkdesigns.pl/assets/images/14-projekt-wntrza-nowoczesnego-mieszkania-pop-of-green-milkdesigns-bartosz-klim-1875x1406.jpg"><p>Adama Mickiewicza</p><p></p></div>
+        </div>
+        <footer>
+            <div class="foot">
+                <a class="kolor" href="glowna.html"><div class="foot1">Strona Główna</div></a>
+                <a class="kolor" href="profile.html"><div class="foot2">Rejestracja</div></a>
+                <a class="kolor" href="glowna.html #formularz"><div class="foot3">kontakt</div></a>
+                <a class="kolor" href="galeria.html"><div class="foot4">nasze projekty</div></a>
+                <a class="kolor" href="cv.html"><div class="foot5">Cv</div></a>
+            
+            </div> 
+            
+            <br><br><br><br>
+            
+            <p>Wszelkie prawa zastrzeżone %#$^983345 zmijewskistudio, Borys Żmijewski</p>
+            </footer>
+    </body>
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+          list.forEach(item => item.classList.remove('active'));
+          this.classList.add('active');
+        }
+        list.forEach(item =>
+          item.addEventListener('click', activeLink))
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>
